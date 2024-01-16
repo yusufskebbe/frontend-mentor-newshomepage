@@ -1,0 +1,54 @@
+$primarySoft-orange: hsl(35, 77%, 62%);
+$primarySoft-red: hsl(5, 85%, 63%);
+
+$white-off: hsl(36, 100%, 99%);
+
+$grayish-blue: hsl(233, 8%, 79%);
+$dark-grayish-blue: hsl(236, 13%, 42%);
+$very-dark-blue: hsl(240, 100%, 5%);
+
+$primary-font:"Inter" , "sans-serf";
+
+$bp-largest:110em; //1600px
+
+$bp-large:95em; // 1470px
+
+$bp-medium:71em; // 800/16 = 50em
+
+$bp-small:36.5em; // 600/16 
+
+
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body{
+  @media only screen and (max-width:$bp-medium) { 
+   padding: 5rem;
+}
+@media only screen and (max-width:$bp-small) { 
+  padding: 2rem;
+}
+  padding: 20rem;
+}
+
+
+html{
+  box-sizing: border-box;
+  font-size: 62%;  // 15px = 0.93rem 
+  @media only screen and (max-width:$bp-largest) { 
+    font-size: 55%;
+}
+
+}
+
+
+body{
+  font-family: $primary-font;
+  font-weight: 400;
+  line-height: 1.6;
+ 
+}
+

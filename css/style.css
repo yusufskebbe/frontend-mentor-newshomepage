@@ -1,0 +1,349 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  padding: 20rem;
+}
+@media only screen and (max-width: 71em) {
+  body {
+    padding: 5rem;
+  }
+}
+@media only screen and (max-width: 36.5em) {
+  body {
+    padding: 2rem;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62%;
+}
+@media only screen and (max-width: 110em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+body {
+  font-family: "Inter", "sans-serf";
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.header {
+  color: white;
+}
+.header__nav {
+  position: relative;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 36.5em) {
+  .header__nav {
+    height: 10rem;
+  }
+}
+.header .desktop__menu {
+  text-decoration: none;
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+}
+@media only screen and (max-width: 36.5em) {
+  .header .desktop__menu {
+    display: none;
+  }
+}
+.header .desktop__menu--item {
+  font-size: 2rem;
+  color: hsl(236, 13%, 42%);
+  cursor: pointer;
+}
+.header .desktop__menu--item:hover {
+  color: hsl(35, 77%, 62%);
+}
+.header__menu {
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2000px;
+  overflow: hidden;
+  width: 70%;
+  font-size: 2rem;
+  color: black;
+  z-index: 10;
+}
+@media only screen and (max-width: 110em) {
+  .header__menu {
+    display: none;
+  }
+}
+@media only screen and (max-width: 36.5em) {
+  .header__menu {
+    display: block;
+  }
+}
+.header__menu ul {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20rem;
+  left: 10rem;
+  gap: 5rem;
+}
+.header__menu li {
+  list-style: none;
+  font-size: 3rem;
+  font-family: "Inter", "sans-serf";
+  font-weight: 800;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.heading--4, .heading--3, .heading--2, .heading--1 {
+  font-family: "Inter", "sans-serf";
+  font-weight: 400;
+}
+
+.heading--1 {
+  font-size: 7rem;
+  color: hsl(240, 100%, 5%);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.heading--2 {
+  color: hsl(35, 77%, 62%);
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.heading--3 {
+  color: hsl(36, 100%, 99%);
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.heading--3:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+p {
+  color: hsl(236, 13%, 42%);
+  font-size: 1.5rem;
+}
+
+.btn {
+  font-size: 2rem;
+  background-color: hsl(5, 85%, 63%);
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  color: hsl(36, 100%, 99%);
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: hsl(240, 100%, 5%);
+}
+
+.header__button {
+  display: none;
+  border: none;
+  border-radius: 0;
+  background-color: black;
+  height: 2px;
+  width: 4.5rem;
+  margin-top: 4rem;
+}
+@media only screen and (max-width: 36.5em) {
+  .header__button {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    top: 3rem;
+  }
+}
+.header__button::before, .header__button::after {
+  background-color: black;
+  height: 2px;
+  width: 4.5rem;
+  content: "";
+  display: block;
+}
+.header__button::before {
+  transform: translateY(-1.5rem);
+}
+.header__button::after {
+  transform: translateY(1.3rem);
+}
+
+.header__button--phone {
+  display: none;
+  border: none;
+  border-radius: 0;
+  margin-top: 4rem;
+}
+@media only screen and (max-width: 71em) {
+  .header__button--phone {
+    display: none;
+  }
+}
+@media only screen and (max-width: 36.5em) {
+  .header__button--phone {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    top: 3rem;
+  }
+}
+.header__button--phone::before, .header__button--phone::after {
+  background-color: black;
+  height: 2px;
+  width: 4.5rem;
+  content: "";
+  display: block;
+  z-index: 100;
+}
+.header__button--phone::before {
+  transform: rotate(47deg);
+}
+.header__button--phone::after {
+  transform: rotate(-47deg);
+}
+
+.divider {
+  height: 1px;
+  background-color: hsl(233, 8%, 79%);
+}
+
+.hero {
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+}
+@media only screen and (max-width: 36.5em) {
+  .hero {
+    gap: 1rem;
+  }
+}
+.hero__img-1 {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  grid-row: 1/span 2;
+  grid-column: 1/9;
+}
+@media only screen and (max-width: 71em) {
+  .hero__img-1 {
+    grid-column: 1/min-content;
+    grid-row: 1/3;
+  }
+}
+.hero__card {
+  background-color: hsl(240, 100%, 5%);
+  grid-row: 1/4;
+  grid-column: 9/13;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media only screen and (max-width: 71em) {
+  .hero__card {
+    grid-column: 1/min-content;
+    grid-row: 5/max-content;
+  }
+}
+.hero__middle {
+  grid-row: 3/4;
+  grid-column: 1/9;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+@media only screen and (max-width: 71em) {
+  .hero__middle {
+    grid-column: 1/min-content;
+    grid-row: 3/4;
+  }
+}
+.hero__middle--heading {
+  grid-column: 1/5;
+}
+@media only screen and (max-width: 95em) {
+  .hero__middle--heading {
+    grid-column: 1/-1;
+  }
+}
+.hero__middle--right {
+  grid-column: 6/-1;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+@media only screen and (max-width: 95em) {
+  .hero__middle--right {
+    grid-row: repeat(2, 1fr);
+    grid-column: 1/-1;
+  }
+}
+.hero__middle--right--btn {
+  align-self: self-start;
+}
+
+.container {
+  grid-row: 4/5;
+  grid-column: 1/-1;
+  display: flex;
+}
+@media only screen and (max-width: 71em) {
+  .container {
+    grid-column: 1/min-content;
+    grid-row: 6/max-content;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.item {
+  display: flex;
+  gap: 1rem;
+}
+.item__img {
+  max-width: 30%;
+}
+.item__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.item__heading-2 {
+  color: hsl(233, 8%, 79%);
+}
+.item__heading-3 {
+  color: hsl(240, 100%, 5%);
+}
+.item__p {
+  color: hsl(233, 8%, 79%);
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

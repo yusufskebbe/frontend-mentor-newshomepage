@@ -1,0 +1,38 @@
+.container{
+  grid-row: 4 / 5 ;
+  grid-column: 1 / -1 ;
+  display: flex;
+  @media only screen and (max-width:$bp-medium) { 
+    grid-column:1 / min-content ;
+    grid-row: 6 / max-content;
+    flex-direction: column;
+    gap: 1rem;;
+}
+}
+
+
+
+.item{
+  display: flex;
+  gap:1rem;
+  &__img{
+  max-width: 30%;
+}
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+  &__heading-2{
+  color: $grayish-blue;
+}
+&__heading-3{
+color: $very-dark-blue;
+}
+&__p{
+color: $grayish-blue;
+font-size: 1.5rem;
+  }
+}
